@@ -10,7 +10,7 @@ html,
 body {
   font-family: 'Roboto Slab', serif;
   scroll-behavior: smooth;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 li {
@@ -321,6 +321,62 @@ button {
 
 .slide:hover {
   transform: scale(1.1);
+}
+
+/* CSS for the desktop version */
+@media (min-width: 769px) {
+  .entrance, .blur-entrance {
+    animation: none; /* Disable animation on desktop */
+  }
+
+  .image {
+    filter: none; /* Remove the blur effect on desktop */
+  }
+}
+
+/* CSS for the mobile version */
+@media (max-width: 768px) {
+  .text {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below the final position */
+    animation: textFadeIn 1s ease-out forwards, textSlideUp 1s 0.5s ease-out forwards;
+  }
+
+  .blur-entrance {
+    animation: blurIn 2s ease-out forwards;
+    filter: blur(10px); /* Apply the initial blur effect */
+  }
+
+  .image {
+    filter: none; /* Remove the blur effect after animation */
+  }
+  
+  @keyframes textFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes textSlideUp {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes blurIn {
+    from {
+      filter: blur(10px);
+    }
+    to {
+      filter: blur(0); /* Remove the blur effect */
+    }
+  }
 }
 
 /*--------------home--------*/
@@ -814,6 +870,9 @@ footer li:hover {
   .home .box .text {
     max-width: 100%;
   }
+  .home .image {
+    background-image: url('//image/home3.jpg');
+  }
 
   .home .box .text::after,
   .home .image_item {
@@ -935,3 +994,4 @@ footer li:hover {
   }
 
 }
+
