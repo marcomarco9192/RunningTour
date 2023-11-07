@@ -463,6 +463,22 @@ input {
   width: 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .right .button-container {
+    display:inline-flex;
+    margin-left: -50px;
+  }
+
+  .right .button-container .btn1 {
+    /* Adjust the width, height, font size, and padding to make the buttons smaller */
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+
 .about {
   margin-bottom: 50px;
 }
@@ -917,10 +933,6 @@ footer li:hover {
     margin-top: 10px;
   }
 
-  .btn1 {
-   background-color: red;
-  }
-
   .wrapper .text {
     width: 80%;
   }
@@ -994,4 +1006,6 @@ footer li:hover {
   }
 
 }
+
+
 
