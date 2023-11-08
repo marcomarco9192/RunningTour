@@ -36,9 +36,9 @@ header {
   height: 8vh;
 }
 
-.logo img {
+/* .logo img {
   width: 
-}
+} */
 header nav {
   background-color:  #1A1A1A; /* Colore giallo */
   padding: 20px 10px; /* Aggiungi spazio sopra/sotto al background se necessario */
@@ -831,9 +831,6 @@ footer li:hover {
   .home .box .text {
     max-width: 100%;
   }
-  .home .image {
-    background-image: url('//image/home3.jpg');
-  }
 
   .home .box .text::after,
   .home .image_item {
@@ -848,29 +845,16 @@ footer li:hover {
 
   .home .image img {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Sposta l'immagine indietro di metà della sua larghezza e altezza per centrarla */
+    transform: translate(-40%, -50%); /* Sposta l'immagine indietro di metà della sua larghezza e altezza per centrarla */
     z-index: -1;
-    width: 100%;
-    height: 70%;
+    width: auto;
+    height: 100%;
   }
-
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .book {
-    height: 150px;
-  }
-
-  .book .search {
-    width: 100%;
-  }
-
-  .book .search input {
-    margin-top: 0;
   }
 
   .left, .right {
@@ -881,7 +865,6 @@ footer li:hover {
   .wrapper .text {
     width: 80%;
   }
-
 
   .room {
     margin-bottom: 100px;
@@ -898,6 +881,12 @@ footer li:hover {
 
   footer .payment {
     grid-template-columns: repeat(4, 1fr);
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text content within the footer */
   }
 }
 
@@ -970,24 +959,9 @@ footer li:hover {
 
 /* For screen widths between 321px and 375px (e.g., iPhone 6, 6s, 7, 8) */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  .about {
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-  .home {
-    margin-top: -10%;
-    margin-bottom: -20%;
-  }
-  .img {
-    left: 3%; 
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text content within the footer */
-  }
+
 }
+
 
 /* For screen widths between 376px and 768px (e.g., various tablets) */
 @media screen and (min-width: 376px) and (max-width: 768px) {
