@@ -798,10 +798,13 @@ footer li:hover {
   }
 
   .about {
-    margin-top: 30vh;
+    margin-top: 28vh;
+  }
+  .about .img {
+    left: 5%;
   }
 
- .home .image img {
+  .home .image img {
     transform: translate(-50%, -50%); /* Center the image */
     z-index: -1;
     width: auto; /* Allow the image to adjust its width */
@@ -809,7 +812,7 @@ footer li:hover {
     max-width: 100%; /* Limit the image width to the screen width */
     object-fit: cover; /* Maintain the aspect ratio and cover the container */
   }
-
+  
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -819,6 +822,7 @@ footer li:hover {
     width: 100%;
     margin-top: 10px;
   }
+
 
   .wrapper .text {
     width: 80%;
@@ -908,8 +912,6 @@ footer li:hover {
 
 
 /* For screen widths between 376px and 768px (e.g., various tablets) */
-
-
 
 
 
