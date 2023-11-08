@@ -342,8 +342,8 @@ button {
 
   
   .book input[type="submit"] {
-    background-color: #FFD700;
-    color: #1E1E1E;
+    background-color: #1E1E1E;
+    color:  white;
     border: none;
     padding: 12px 24px; /* Increased padding for larger button */
     border-radius: 6px; /* Increased border radius for rounded corners */
@@ -408,8 +408,9 @@ button {
     }
   
     .book {
-      margin-top: 10%;
+      margin-top: 20%;
       height: auto;
+      background-color: #FFD700;
     }
   
     .book .search {
