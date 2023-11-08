@@ -404,6 +404,7 @@ button {
     margin-top: 150px;
     margin-bottom: 50px;
   }
+
   footer {
     display: flex;
     justify-content: center;
@@ -421,6 +422,9 @@ button {
   .home {
     margin-top: -10%;
     margin-bottom: -20%;
+  }
+  .img {
+    left: 0 auto; 
   }
   footer {
     display: flex;
@@ -440,6 +444,9 @@ button {
     margin-top: -10%;
     margin-bottom: 25%;
   }
+  .img {
+    left: 0 auto; 
+  }
   footer {
     display: flex;
     justify-content: center;
@@ -457,6 +464,9 @@ button {
   .home {
     margin-top: 100px;
     margin-bottom: -140px;
+  }
+  .img {
+    left: 0 auto; 
   }
   footer {
     display: flex;
@@ -557,6 +567,9 @@ button {
       margin-top: -50%;
       margin-bottom: 20%;
     } 
+    .img {
+      right: 25%; 
+    }
     .home .text {
       margin: 20% 0 0 0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
@@ -1143,6 +1156,7 @@ footer li:hover {
   }
 
 }
+
 
 
 
