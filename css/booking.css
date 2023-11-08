@@ -398,6 +398,10 @@ button {
     .book .container {
       flex-direction: column;
     }
+    
+    .home .image img {
+     display: none;
+    }
   
     .grid {
       grid-template-columns: repeat(2, 1fr);
@@ -496,5 +500,7 @@ button {
       margin-top: 300px;
     }
   }
+
+  
 
   
