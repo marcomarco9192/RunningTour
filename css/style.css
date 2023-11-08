@@ -627,7 +627,7 @@ header ul li a:hover::after {
 }
 
 .wrapper2 .text {
-  left: 6%;
+  left: 10%;
 }
 
 .wrapper2 h5,
@@ -801,7 +801,7 @@ footer li:hover {
     margin-top: 28vh;
   }
   .about .img {
-    left: 10%;
+    left: 5%;
   }
 
   .home .image img {
@@ -912,4 +912,3 @@ footer li:hover {
 
 
 /* For screen widths between 376px and 768px (e.g., various tablets) */
-
