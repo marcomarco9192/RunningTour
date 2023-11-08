@@ -812,6 +812,16 @@ footer li:hover {
     max-width: 100%; /* Limit the image width to the screen width */
     object-fit: cover; /* Maintain the aspect ratio and cover the container */
   }
+
+  #thumbnailContainer {
+    width: auto;
+    right: 10px;
+  }
+
+  #thumbnailContainer .slide {
+    height: auto;
+    width: 90px;
+  }
   
 
   .grid {
@@ -1057,4 +1067,5 @@ footer li:hover {
 
   }  /* Add your styles for 912x1368 screens here */
 }
+
 
