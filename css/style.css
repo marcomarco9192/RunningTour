@@ -989,11 +989,15 @@ footer li:hover {
     margin-bottom: 90px;
   }
   .home {
-    margin-top: -50%;
+    margin-top: 50%;
     margin-bottom: 20%;
   } 
+
   .img {
     right: 25%; 
+  }
+  #thumbnailContainer {
+    display: none;
   }
   .home .text {
     margin: 20% 0 0 0;
