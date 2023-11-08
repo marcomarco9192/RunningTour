@@ -1,1116 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-html,
-body {
-  font-family: 'Roboto Slab', serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+  <link rel="stylesheet" href="css/style.css">
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  max-width: 80%;
-  margin: auto;
-}
-
-.head_container {
-  max-width: 90%;
-  margin: auto;
-}
-
-/*--------------header--------*/
-header {
-  height: 8vh;
-}
-
-.logo img {
-  width: 120px;
-}
-header nav {
-  background-color:  #1A1A1A; /* Colore giallo */
-  padding: 20px 10px; /* Aggiungi spazio sopra/sotto al background se necessario */
-  width: 100%; /* Larghezza al 100% del background */
-  top: 0; /* Inizia dall'alto della finestra */
-  right: 0; /* Inizia dal lato destro della finestra */
-  position: absolute;
-  display: flex; /* Assicurati che i contenuti siano allineati orizzontalmente */
-  justify-content: right; /* Allinea il menu a destra */
-}
-
-.nav-book {
-  color: #1E1E1E;
-  background-color: #FFD700;
-  padding: 10px 80px;
-}
-.nav-book:hover {
-  color: #1E1E1E;
-  background-color: #808080;
-  color: white;
-  padding: 20px 80px;
-}
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
-/* Stile per il tema light */
-.light-theme {
-  background-color: #ffffff; /* Cambia il colore di sfondo per il tema light */
-  color: #1E1E1E; /* Cambia il colore del testo per il tema light */
-}
-
-/* Stile per il tema dark */
-.dark-theme {
-  background-color: #1E1E1E; /* Cambia il colore di sfondo per il tema dark */
-  color: #ffffff; /* Cambia il colore del testo per il tema dark */
-}
-
-
-/* Aggiungi questo stile per le icone verticali sulla destra */
-.icons-container {
-  position: absolute;
-  right: 25px;
-  top: 148px;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 100px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.theme-toggle button {
-  background: none;
-  border: none;
-  color: #333; /* Text color */
-  cursor: pointer;
-  font-size: 16px;
-  padding: 5px 10px;
-  transition: color 0.3s;
-}
-
-.theme-toggle button:hover {
-  color: #667; /* Text color on hover */
-}
-
-
-
-
-/* Stili per il menu (ul, li, a, ecc.) */
-
-
-
-.hambuger {
-  display: none;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
-}
-
-header ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header ul li {
-  margin-left: 3rem;
-}
-
-header ul li a {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: white;
-  transition: 0.5s;
-}
-
-header ul li a {
-  position: relative;
-  text-decoration: none;
-  color: white;
-}
-
-header ul li a:hover::before,
-header ul li a:hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #FFD700;
-}
-
-header ul li a:hover::before {
-  top: -3px;
-}
-
-header ul li a:hover::after {
-  bottom: -3px;
-}
-@media only screen and (max-width: 768px) {
-  header ul {
-    display: block;
-    position: fixed;
-    left: -100%;
-    top: 5rem;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.5s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    z-index: 20;
-  }
-
-  header ul.active {
-    left: 0%;
-  }
-
-  header ul li {
-    margin: 2.5rem 0;
-  }
-
-  header ul li a {
-    color: black;
-  }
-
-  .hambuger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .hambuger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hambuger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hambuger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+  <script type="text/javascript">
+    window.onload = function () {
+      window.scrollTo(0, 0);
+    }
+  </script>
+  
+  
   
 
-}
+</head>
 
-/*--------------header--------*/
-/*--------------home--------*/
-.home .image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Sposta l'immagine indietro di metà della sua larghezza e altezza per centrarla */
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
 
-.home {
-  height: 450px;
-}
-
+        <ul class="nav-menu menu-bg">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#before" class="nav-link">Before You Go</a> </li>
+          <li> <a href="#routes" class="nav-link">Routes</a> </li>
+          <li> <a href="#gallery" class="nav-link">Photo</a> </li>
+          <li> <a href="booking.html" class="nav-link nav-book">Book Now</a> </li>
+        </ul>
 
 
-.home .text {
-  max-width: 50%;
-  color: white;
-  margin: 20% 0 0 10%;
-}
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
 
-.home h1 {
-  font-size: 80px;
-  font-weight: 400;
-}
+    hambuger.addEventListener("click", mobileMenu);
 
-.home p {
-  font-weight: 400;
-  line-height: 25px;
-  font-family: sans-serif;
-  font-size: 17px;
-  margin: 50px 0 0 50px;
-}
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
 
-button {
-  padding: 20px 40px;
-  background: none;
-  outline: none;
-  border: 2px solid white;
-  border-radius: 50px;
-  color: white;
-  margin-top: 20px;
-}
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-.home button {
-  margin-left: 50px;
-}
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
 
-.home .image_item {
-  position: absolute;
-  top: 20%;
-  right: 20%;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="box">
+          <div class="text">
+            <h1 class="entrance">Run in Venice!</h1>
+            <p class="entrance">Join the tour to explore Venice's main attractions and promenades. During your run with us, you'll have the opportunity to savor the tranquil morning views of the city, immerse yourself in its vibrant rhythm, and even feel like a Venetian on a morning jog. We'll also capture numerous photos to help you cherish the beauty of Venice!</p>
+            <a href="booking.html" class="entrance"><button class="btn2">GO!</button></a>
+          </div>
+        </div>        
+         
+      <div class="image">
+        <img src="image/home2.jpg" class="slide blur-entrance" id="mainImage">
+      </div>
+      <div class="image_item" id="thumbnailContainer">
+        <img src="image/home1.jpg" alt="" class="slide active" data-src="image/home1.jpg">
+        <img src="image/home2.jpg" alt="" class="slide" data-src="image/home2.jpg">
+        <img src="image/home3.jpg" alt="" class="slide" data-src="image/home3.jpg">
+        <img src="image/home4.jpg" alt="" class="slide" data-src="image/home4.jpg">
+      </div>
+      </div>
+      </section>
+      
+      <script>
 
-.home .image_item img {
-  width: 140px;
-  height: 94px;
-  margin: 10px;
-  transition: 0.5s;
-  border-radius: 5px;
-}
+const thumbnailContainer = document.getElementById('thumbnailContainer');
+const thumbnails = thumbnailContainer.querySelectorAll('.slide');
+const mainImage = document.getElementById('mainImage');
+const imageContainer = document.querySelector('.image');
 
-.home .image_item img.active {
-  border: 2px solid white;
-}
+thumbnailContainer.addEventListener('mouseenter', () => {
+  thumbnailContainer.classList.add('active');
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.add('active');
+  });
+  imageContainer.style.background = 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)), url(' + mainImage.src + ')';
+});
 
-.home .box .text {
-  position: relative;
-}
+thumbnailContainer.addEventListener('mouseleave', () => {
+  thumbnailContainer.classList.remove('active');
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.remove('active');
+  });
+  imageContainer.style.background = 'none';
+});
 
-.home .box .text::after {
-  position: absolute;
-  content: 'D';
-  font-size: 500px;
-  top: -120%;
-  font-weight: bold;
-  opacity: 0.1;
-}
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('click', () => {
+    const newSrc = thumbnail.getAttribute('data-src');
+    mainImage.src = newSrc;
+    imageContainer.style.background = 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)), url(' + mainImage.src + ')';
+  });
+});
+
+        function img(anything) {
+          document.querySelector('.slide').src = anything;
+        }
+    
+        function change(change) {
+          const line = document.querySelector('.image');
+          line.style.background = change;
+        }
+      </script>
+      
+
+       <!--<section class="book">
+  </section> --> 
 
 
-#thumbnailContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/aboutme.gif" alt="" class="image1">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Venice Sunrise Running Tour</h5>
+          <h2>About your guide</h2>
+          <p>Hey there :) My name is Denis. I have been a resident of Venice for over 10 years, and as an avid runner, I am thrilled to offer you an unforgettable experience of a serene morning city center, along with showcasing the main water-based attractions of the city. An added bonus for you is the opportunity to start your day with a refreshing workout and good vibes, which will surely accompany you throughout the rest of the day. Ready?</p>
+          <div class="button-container">
+            <button class="btn1" id="feedbacks-button">FEEDBACKS</button>
+            <a href="https://youtube.com/shorts/bceRTZ_x8hI?si=rAdlRcawxpTc-7ST">
+              <button class="btn1" id="feedbacks-button">WATCH NOW</button>
+            </a>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </section>
+  <section class="wrapper top" id="before">
+    <div class="container">
+      <div class="text">
+        <h2>KNOW BEFORE YOU GO</h2>
+        <p>Runners of various abilities and paces are welcome! This isn't a competitive race but rather an enjoyable journey through Venice at a relaxed pace. Our approach is inclusive, with the group adjusting to the pace of the slowest runner, ensuring no one gets left behind. Rest assured, you're in good company!</p>
+        <p>Regardless, it's important to be an active individual who takes pleasure in physical activity and can comfortably run a minimum of 5 kilometers (or 3 miles) without interruption before considering participation in this tour.</p>
+        <p>We only allow minors of 18 years old when they have the expressed authorization of their parents or responsible adults</p>
+        <p>Our experience starts on time. To avoid ruining the other guests' experience, we kindly ask you to arrive at our meeting point around 5 minutes earlier. </p>
+        <p>Our tours take place regardless of the weather conditions. If the weather becomes unfavorable, we will get in touch with you to discuss cancellations and rescheduling. If you don't receive a message from us, it indicates that the tour is proceeding as planned.</p>
+        <p>We want to ensure that your Venice Running Morning Tour is enjoyable and safe. However, it's important to note that we do not assume responsibility for any unforeseen circumstances or events during the tour. While we make every effort to provide a positive experience, participants should be aware of their own limitations and act responsibly. Safety is our top priority, and we encourage all participants to follow our guidelines and recommendations to have a memorable and secure running adventure in Venice.</p>
 
-#thumbnailContainer.active {
-  opacity: 1;
-}
 
-.slide {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.slide.active {
-  transform: scale(1);
-}
-
-.slide:hover {
-  transform: scale(1.1);
-}
-
-/* CSS for the desktop version */
-@media (min-width: 769px) {
-  .entrance, .blur-entrance {
-    animation: none; /* Disable animation on desktop */
-  }
-
-  .image {
-    filter: none; /* Remove the blur effect on desktop */
-  }
-}
-
-/* CSS for the mobile version */
-@media (max-width: 768px) {
-  .text {
-    opacity: 0;
-    transform: translateY(20px); /* Start slightly below the final position */
-    animation: textFadeIn 1s ease-out forwards, textSlideUp 1s 0.5s ease-out forwards;
-  }
-
-  .blur-entrance {
-    animation: blurIn 2s ease-out forwards;
-    filter: blur(10px); /* Apply the initial blur effect */
-  }
-
-  .image {
-    filter: none; /* Remove the blur effect after animation */
-  }
+        <div class="content">
+         
+          
+        </div>
+      </div>
+    </div>
+  </section>
 
   
-  @keyframes textFadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  <section class="room top" id="routes">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>OUR RUNNING ROUTES</h5>
+        </div>
+       <!-- <div class="button1">
+          <a href="booking.html">
+            <button class="btn1">BOOK NOW</button>
+          </a>
+        </div>
+      </div>
+      -->
 
-  @keyframes textSlideUp {
-    from {
-      transform: translateY(20px);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Venice Sunrise Running Tour</h3>
+            <p> <span>eur</span> 35 <span>/per person</span> </p>
+            <p> <span>From 7:00 AM To 8:00 AM</span></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  @keyframes blurIn {
-    from {
-      filter: blur(10px);
-    }
-    to {
-      filter: blur(0); /* Remove the blur effect */
-    }
-  }
-}
+  <script>
+    document.querySelector("#routes").addEventListener("click", function () {
+      window.location.href = "booking.html";
+    });
+  </script>
 
-/*--------------home--------*/
-/*--------------book--------*/
-.flex {
-  display: flex;
-}
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h2 id="people">People Say</h2>
+        </div>
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 60px;
-}
+        <div class="para">
+          <p>"Amazing way to see Venice! This tour was my first outting in Venice, and I was able to see the highlights of the whole city before most people were even awake. Later in the day I went back to some of the locations we ran through, and I could hardly walk through the crowds! Dennis made for a super fun environment, and our group had a really fun chat over gifted espresso and croissants after!"</p>
+          <p>"This was by far the best tour I did in Venice. An early start meeting on the Rialto Bridge at 6am but walking to the meet up you note all the necessary early morning activities of the restocking of the bars and restaurants while everyone sleeps.There were only 3 of us, I only jog 5k a couple of times a week and the other lady was a Marathon runner but Denis paced us both perfectly.We did a gentle run round 3 districts stopping to point out various areas of interest including a beautiful sunrise above Giudecca. In August I did not expect to have Venice to myself but I did. Do not hesitate to book with Denis, he is kind, knowledgeable and the perfect host!"</p>
+          <p>"Felt like I was on a morning run with a friend- exactly what I wanted! We stopped to take a few photos as well. Highly recommend!"</p>
 
-.about {
-  margin-top: 100%;
-}
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-/* For screen widths up to 320px (e.g., iPhone SE) */
-@media screen and (max-width: 320px) {
-  .about {
-    margin-top: 150px;
-    margin-bottom: 50px;
-  }
-}
-
-/* For screen widths between 321px and 375px (e.g., iPhone 6, 6s, 7, 8) */
-@media screen and (min-width: 321px) and (max-width: 375px) {
-  .about {
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-  .home {
-    margin-top: -10%;
-    margin-bottom: -20%;
-  }
-}
-
-/* For screen widths between 376px and 768px (e.g., various tablets) */
-@media screen and (min-width: 376px) and (max-width: 768px) {
-  .about {
-    margin-top: 30px;
-    margin-bottom: 90px;
-  }
-  .home {
-    margin-top: -10%;
-    margin-bottom: 25%;
-  }
+  <script>
+    // Get a reference to the button and the target section
+    const feedbacksButton = document.getElementById('feedbacks-button');
+    const wrapper2Section = document.querySelector('.wrapper2');
   
-}
-
-@media screen and (width: 360px) and (height: 740px) {
-
-  .about {
-    margin-bottom: 90px;
-  }
-  .home {
-    margin-top: 100px;
-    margin-bottom: -140px;
-  }
-}
-
-  /* Specific styles for 360x740 screen size */
-  @media screen and (width: 360px) and (height: 740px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 120px;
-      margin-bottom: -100px;
-    }
-  }
-
-  @media screen and (width: 412px) and (height: 915px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 120px;
-      margin-bottom: 80px;
-    }
-    /* Add your styles for 412x915 screens here */
-  }
-
-  @media screen and (width: 820px) and (height: 1180px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 10%;
-      margin-bottom: 70%;
-    }
-
-    .nav-book {
-      color: #1E1E1E;
-      background-color: #FFD700;
-      padding: 2px 20px;
-    }
-    .nav-book:hover {
-      color: #1E1E1E;
-      background-color: #808080;
-      color: white;
-      padding: 20px 80px;
-    }
-    /* Add your styles for 820x1180 screens here */
-  }
-
-  @media screen and (width: 768px) and (height: 1024px) {
-    .left {
-      text-align: center; /* Center the content within the left column */
-    }
+    // Add a click event listener to the button
+    feedbacksButton.addEventListener('click', function () {
+      // Calculate the distance to scroll
+      const offsetTop = wrapper2Section.offsetTop;
   
-    .right {
-      text-align: center; /* Center the content within the right column */
-    }
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Center text content within the footer */
-    }
-   /* Add your styles for 768x1024 screens here */
-  }
+      // Scroll to the "wrapper2" section with smooth behavior
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    });
+  </script>
 
-  @media screen and (width: 912px) and (height: 1368px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 50%;
-      margin-bottom: -50%;
-    }  /* Add your styles for 912x1368 screens here */
-  }
-  @media screen and (width: 280px) and (height: 653px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: -50%;
-      margin-bottom: 20%;
-    } 
-    .home .text {
-      margin: 20% 0 0 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    }
-  
-    .home h1 {
-      font-size: 20px;
-    }
-  
-    .home p {
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-      font-size: 13px;
-    }
-    .left {
-      text-align: left; /* Center the content within the left column */
-    }
-  
-    .right {
-      text-align: left; /* Center the content within the right column */
-    }
-    #feedbacks-button {
-      margin-left: 30px;
-    }
-    /* Add your styles for 280x653 screens here */
-}
-
-
-
-
-
-/*--------------book--------*/
-/*--------------about--------*/
-.top {
-  margin-top: 10%;
-}
-
-.mtop {
-  margin-top: 5%;
-}
-
-.left, .right {
-  width: 50%;
-}
-
-@media screen and (max-width: 768px) {
-  .right .button-container {
-    display:inline-flex;
-    margin-left: -50px;
-  }
-
-  .right .button-container .btn1 {
-    /* Adjust the width, height, font size, and padding to make the buttons smaller */
-    width: 100px;
-    height: 40px;
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-}
-
-
-
-.about .img {
-  position: relative;
-}
-
-
-
-.about .image1 {
-  width: 310px;
-  height: 450px;
-  border-radius: 8px;
-}
-
-
-.about .image2 {
-  width: 325px;
-  height: 220px;
-  position: absolute;
-  bottom: 5px;
-  z-index: 2;
-  right: 30%;
-}
-
-.heading {
-  position: relative;
-}
-
-.heading::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100px;
-  height: 4px;
-  background: #FFD700;
-}
-
-.heading h5 {
-  font-weight: 400;
-  letter-spacing: 2px;
-  padding-top: 20px;
-  color: #1E1E1E;
-}
-
-.heading h2 {
-  font-size: 30px;
-  font-weight: 400;
-  margin: 20px 0 40px 0;
-  color: #222222;
-}
-
-.heading p {
-  margin-bottom: 20px;
-  line-height: 25px;
-  color: #222222;
-  margin: 0 0 20px 50px;
-}
-
-.heading .btn1 {
-  margin: 50px 0 20px 50px;
-}
-
-.button1 {
-  background-color: #808080;
-  padding: 100px;
-  animation: constantAnimation 5s infinite alternate;
-  position: absolute;
-  right: 10%;
-}
-
-@keyframes constantAnimation {
-  0% {
-    background-color: #808080;
-  }
-  100% {
-    background-color: white; /* Cambia il colore di sfondo desiderato */
-  }
-}
-
-.btn2 {
-  background: #FFD700;
-  color:   #1E1E1E;
-  padding: 12px 24px; /* Increase padding for a larger button */
-  border: none;
-  border-radius: 6px;
-  font-size: 18px; /* Increase font size for larger text */
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn1 {
-  background: #FFD700;
-  color:   #1E1E1E;
-  padding: 12px 24px; /* Increase padding for a larger button */
-  border: none;
-  border-radius: 6px;
-  font-size: 18px; /* Increase font size for larger text */
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-/* Styles when hovering over the button */
-.btn2:hover {
-  background: #808080; /* Brighter orange on hover */
-  color: white;
-}
-
-
-.btn2:hover::before,
-.btn2::after {
-  content: "🏃‍♂️";
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: none;
-}
-
-header ul li a:hover::before {
-  top: -3px;
-}
-
-header ul li a:hover::after {
-  bottom: -3px;
-}
-
-.btn1:hover {
-  background: #808080; /* Brighter orange on hover */
-  color: white;
-}
-
-/* Styles when the button is clicked */
-.btn2:active {
-  transform: scale(1.1); /* Scale up the button when clicked */
-}
-.btn1:active {
-  transform: scale(1.1); /* Scale up the button when clicked */
-}
-
-/*--------------about--------*/
-/*--------------wrapper--------*/
-.wrapper {
-  background-image: url("../image/r4.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 480px;
-  position: relative;
-}
-
-.wrapper .text {
-  background:  #1A1A1A;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-right: 20px;
-  width: 40%;
-  height: 600px;
-  position: absolute;
-  top: -13%;
-  right: 10%;
-  color: #FFD700;
-  font-size: 12px;
-}
-
-.wrapper .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 30px;
-}
-
-.wrapper h2 {
-  font-weight: 400;
-}
-
-#people {
-  color: #FFD700;
-}
-
-.wrapper p {
-  margin: 10px 0 20px 0;
-  line-height: 20px;
-  color: white;
-}
-
-.wrapper .note {
-  color: white;
-}
-
-.wrapper i {
-  margin: 5px 20px 0 0;
-}
-
-/*--------------wrapper--------*/
-/*--------------room--------*/
-.flex1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.room .grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.room img {
-  width: 100%;
-  height: 100%;
-}
-
-.room .box {
-  box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
-}
-
-.room .text {
-  padding: 20px;
-}
-
-.room h3 {
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.room p span {
-  font-size: 12px;
-  color: grey;
-}
-
-.room p {
-  font-size: 20px;
-}
-
-#routes {
-  transition: transform 0.2s, cursor 0.2s;
-}
-
-#routes:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/*--------------room--------*/
-/*--------------wrapper2--------*/
-.wrapper2 {
-  background-image: url("../image/jogging.jpg");
-}
-
-.wrapper2 .text {
-  left: 10%;
-}
-
-.wrapper2 h5,
-.wrapper2 h2 {
-  color: #333333;
-}
-
-.wrapper2 img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10%;
-  margin-right: 20px;
-}
-
-.wrapper2 .para h2 {
-  font-size: 13px;
-  margin-top: 5px;
-}
-
-.wrapper2 .para {
-  margin-left: 5%;
-  font-size: 15px;
-  font-weight: 300;
-  margin-top: 5px;
-}
-
-/*--------------wrapper2--------*/
-/*--------------restaurant--------*/
-.restaurant img {
-  width: 100%;
-  height: 100%;
-}
-
-.restaurant .right {
-  padding: 50px 50px 50px 100px;
-}
-
-.restaurant h2 {
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.restaurant .text p {
-  margin-bottom: 50px;
-  line-height: 25px;
-}
-
-.accordionItem {
-  margin-top: 30px;
-}
-
-.accordionItem p {
-  font-size: 15px;
-  opacity: 0.8;
-  font-family: sans-serif;
-  line-height: 20px;
-}
-
-.accordionIHeading {
-  cursor: pointer;
-  width: 100%;
-  border-radius: 3px;
-  font-weight: 400;
-  font-size: 17px;
-  color: #ff5a5f;
-  margin-bottom: 20px;
-}
-
-.close .accordionItemContent {
-  height: 0px;
-  transition: height 1s ease-out;
-  transform: scaleY(0);
-  float: left;
-  display: block;
-  background-color: #fff;
-}
-
-.open .accordionItemContent {
-  padding: 30px;
-  background-color: #fff;
-  width: 100%;
-  margin: 0 0 10px 0;
-  display: block;
-  transform: scaleY(1);
-  transform-origin: top;
-  transition: transform 0.4s ease;
-  box-sizing: border-box;
-  box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
-}
-
-/*--------------restaurant--------*/
-/*--------------gallary--------*/
-.gallery img {
-  width: 270px;
-  height: 350px;
-  
-}
-
-.owl-carousel .owl-next,
-.owl-carousel .owl-prev {
-  height: 50px;
-  position: absolute;
-  width: 50px;
-  cursor: pointer;
-  top: 35%;
-  background: white !important;
-  transition: 0.5s;
-}
-
-.owl-carousel .owl-prev {
-  left: 33px;
-}
-
-.owl-carousel .owl-next {
-  right: 33px;
-}
-
-.owl-carousel .owl-next:hover,
-.owl-carousel .owl-prev:hover {
-  background: #ff5a5f !important;
-}
-
-/*--------------gallary--------*/
-/*--------------map--------*/
-
-.top .heading  {
-  margin-left: 10%;
-}
   
 
-.map iframe {
-  width: 100%;
-}
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+  <section class="gallery mtop " id="gallery">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Tour</h2>
+        </div>
+        <div class="button">
+          <a href="https://instagram.com/runinvenice?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank">
+            <button class="btn1">INSTA GALLERY</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/photo4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/photogallery2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/photogallery3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/photo5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/photo9.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+<section class="map top">
+  <div class="heading">
+    <h5>MEETING POINT</h5>
+    <h2>Rialto Bridge</h2>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11153.381967019436!2d12.3332673!3d45.4383683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1en!2it!4v1637763215366&q=Rialto%20Bridge&output=embed&ll=45.4383683,12.3332673&z=17&markers=45.4383683,12.3332673&hl=en"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
 
 
 
-/*--------------map--------*/
-/*--------------footer--------*/
-footer h3 {
-  margin-bottom: 20px;
-}
-
-footer li {
-  margin-bottom: 15px;
-  transition: 0.5s;
-}
-
-footer li:hover {
-  color: #FF4500;
-  cursor: pointer;
-}
-
-/*--------------footer--------*/
-@media only screen and (max-width:768px) {
-  .home .box .text {
-    max-width: 100%;
-  }
-  .home .image {
-    background-image: url('//image/home3.jpg');
-  }
-
-  .home .box .text::after,
-  .home .image_item {
-    display: none;
-  }
-
-  .restaurant .container,
-  .about .container,
-  .book .container {
-    flex-direction: column;
-  }
-
-  .home .image img {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Sposta l'immagine indietro di metà della sua larghezza e altezza per centrarla */
-    z-index: -1;
-    width: 100%;
-    height: 70%;
-  }
 
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+       <!-- <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" /> 
+       <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 
-  .book {
-    height: 150px;
-  }
+        <h3>Accepted payment methods</h3>
+        <div class="payment grid">
+          <img width="48" height="48" src="https://img.icons8.com/color/48/stripe.png" alt="stripe"/>
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+        </div>
+      </div>
 
-  .book .search {
-    width: 100%;
-  }
+      <div class="box">
+        <h3>Our Partners' Tours</h3>
+        <ul>
+          <li>Secret Island Boat Tour Is Just for You</li>
+          <li>Chill and Escape in a Natural Shelters</li>
+          <li>Boat Tour to San Servolo</li>
+          <li>Live Music Concerts in Venice</li>
+        </ul>
+      </div>
 
-  .book .search input {
-    margin-top: 0;
-  }
+      <div class="box">
+        <h3>For Customers</h3>
+       <ul>
+          <li>About Us</li>
+          <li>Customer Care/Help</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+   
+      </div>
 
-  .left, .right {
-    width: 100%;
-    margin-top: 10px;
-  }
+      <div class="box">
+        <h3>Contact Us</h3>
 
-  .wrapper .text {
-    width: 80%;
-  }
+        <ul>
+          <!--<li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>-->
+          <li><i class="far fa-envelope"></i> runninginvenice@gmail.com</li>
+          <li><i class="far fa-phone-alt"></i> +39 389 64 64 645 </li>
+          <!-- <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li> -->
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
 
-
-  .room {
-    margin-bottom: 100px;
-  }
-
-  .room .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .restaurant .right {
-    padding: 0;
-    margin-top: 50px;
-  }
-
-  footer .payment {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .home .text {
-    margin: 30% 0 0 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-  }
-
-  .home h1 {
-    font-size: 40px;
-  }
-
-  .home p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    font-size: 13px;
-  }
-
-  .about p {
-    margin: 50px 0 0 0;
-  }
-
-  .wrapper .text  {
-    font-size: 12px;
-    height: 600px;
-    overflow: auto;
-  }
-
-  .wrapper2 .para {
-    font-size: 13px;
-    overflow: auto;
-  }
-
-  .heading_top {
-    margin-top: 100px;
-  }
-
-  .heading_top button {
-    display: none;
-  }
-
-  .restaurant .flex {
-    flex-direction: column-reverse;
-  }
-  .map .heading {
-    margin-left: 40px;
-  }
-
-}
+</html>
 
 
 
