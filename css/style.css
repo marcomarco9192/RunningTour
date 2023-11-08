@@ -801,7 +801,7 @@ footer li:hover {
     margin-top: 28vh;
   }
   .about .img {
-    left: 5%;
+    left: 10%;
   }
 
   .home .image img {
@@ -912,6 +912,4 @@ footer li:hover {
 
 
 /* For screen widths between 376px and 768px (e.g., various tablets) */
-
-
 
