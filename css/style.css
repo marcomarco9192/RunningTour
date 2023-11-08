@@ -802,11 +802,13 @@ footer li:hover {
   }
 
   .home .image img {
-    transform: translate(-40%, -50%); /* Sposta l'immagine indietro di metà della sua larghezza e altezza per centrarla */
+    transform: translate(-50%, -50%); /* Center the image */
     z-index: -1;
-    width: auto;
+    max-width: 100%; /* Limit the image width to the screen width */
     height: 100vh;
+    overflow: hidden;
   }
+
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -905,7 +907,6 @@ footer li:hover {
 
 
 /* For screen widths between 376px and 768px (e.g., various tablets) */
-
 
 
 
