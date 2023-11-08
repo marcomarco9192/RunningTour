@@ -1042,3 +1042,15 @@ footer li:hover {
     text-align: center; /* Center text content within the footer */
   }
 }
+
+
+@media screen and (width: 1024px) and (height: 600px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: -15%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
