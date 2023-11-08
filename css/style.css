@@ -398,209 +398,6 @@ button {
   margin-top: 100%;
 }
 
-/* For screen widths up to 320px (e.g., iPhone SE) */
-@media screen and (max-width: 320px) {
-  .about {
-    margin-top: 150px;
-    margin-bottom: 50px;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text content within the footer */
-  }
-}
-
-/* For screen widths between 321px and 375px (e.g., iPhone 6, 6s, 7, 8) */
-@media screen and (min-width: 321px) and (max-width: 375px) {
-  .about {
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-  .home {
-    margin-top: -10%;
-    margin-bottom: -20%;
-  }
-  .img {
-    left: 0 auto; 
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text content within the footer */
-  }
-}
-
-/* For screen widths between 376px and 768px (e.g., various tablets) */
-@media screen and (min-width: 376px) and (max-width: 768px) {
-  .about {
-    margin-top: 30px;
-    margin-bottom: 90px;
-  }
-  .home {
-    margin-top: -10%;
-    margin-bottom: 25%;
-  }
-  .img {
-    left: 0 auto; 
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text content within the footer */
-  }
-  
-}
-
-@media screen and (width: 360px) and (height: 740px) {
-
-  .about {
-    margin-bottom: 90px;
-  }
-  .home {
-    margin-top: 100px;
-    margin-bottom: -140px;
-  }
-  .img {
-    left: 0 auto; 
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text content within the footer */
-  }
-}
-
-  /* Specific styles for 360x740 screen size */
-  @media screen and (width: 360px) and (height: 740px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 120px;
-      margin-bottom: -100px;
-    }
-  }
-
-  @media screen and (width: 412px) and (height: 915px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 120px;
-      margin-bottom: 80px;
-    }
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Center text content within the footer */
-    }
-    /* Add your styles for 412x915 screens here */
-  }
-
-  @media screen and (width: 820px) and (height: 1180px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 10%;
-      margin-bottom: 70%;
-    }
-
-    .nav-book {
-      color: #1E1E1E;
-      background-color: #FFD700;
-      padding: 2px 20px;
-    }
-    .nav-book:hover {
-      color: #1E1E1E;
-      background-color: #808080;
-      color: white;
-      padding: 20px 80px;
-    }
-    /* Add your styles for 820x1180 screens here */
-  }
-
-  @media screen and (width: 768px) and (height: 1024px) {
-    .left {
-      text-align: center; /* Center the content within the left column */
-    }
-  
-    .right {
-      text-align: center; /* Center the content within the right column */
-    }
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Center text content within the footer */
-    }
-   /* Add your styles for 768x1024 screens here */
-  }
-
-  @media screen and (width: 912px) and (height: 1368px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: 50%;
-      margin-bottom: -50%;
-    }  /* Add your styles for 912x1368 screens here */
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Center text content within the footer */
-    }
-  }
-  @media screen and (width: 280px) and (height: 653px) {
-    .about {
-      margin-bottom: 90px;
-    }
-    .home {
-      margin-top: -50%;
-      margin-bottom: 20%;
-    } 
-    .img {
-      right: 25%; 
-    }
-    .home .text {
-      margin: 20% 0 0 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-    }
-  
-    .home h1 {
-      font-size: 20px;
-    }
-  
-    .home p {
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-      font-size: 13px;
-    }
-    .left {
-      text-align: left; /* Center the content within the left column */
-    }
-  
-    .right {
-      text-align: left; /* Center the content within the right column */
-    }
-    #feedbacks-button {
-      margin-left: 30px;
-    }
-    footer {
-      display: flex;
-      justify-content: left;
-      align-items: left;
-      text-align: left; /* Center text content within the footer */
-    }
-    /* Add your styles for 280x653 screens here */
-}
 
 /*--------------book--------*/
 /*--------------about--------*/
@@ -1154,7 +951,212 @@ footer li:hover {
   .map .heading {
     margin-left: 40px;
   }
+}
 
+/*--------------media querries--------*/
+
+/* For screen widths up to 320px (e.g., iPhone SE) */
+@media screen and (max-width: 320px) {
+  .about {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text content within the footer */
+  }
+}
+
+/* For screen widths between 321px and 375px (e.g., iPhone 6, 6s, 7, 8) */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .about {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+  .home {
+    margin-top: -10%;
+    margin-bottom: -20%;
+  }
+  .img {
+    left: 0 auto; 
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text content within the footer */
+  }
+}
+
+/* For screen widths between 376px and 768px (e.g., various tablets) */
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .about {
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: -10%;
+    margin-bottom: 25%;
+  }
+  .img {
+    left: 0 auto; 
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text content within the footer */
+  }
+  
+}
+
+@media screen and (width: 360px) and (height: 740px) {
+
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 100px;
+    margin-bottom: -140px;
+  }
+  .img {
+    left: 0 auto; 
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text content within the footer */
+  }
+}
+
+  /* Specific styles for 360x740 screen size */
+  @media screen and (width: 360px) and (height: 740px) {
+    .about {
+      margin-bottom: 90px;
+    }
+    .home {
+      margin-top: 120px;
+      margin-bottom: -100px;
+    }
+  }
+
+  @media screen and (width: 412px) and (height: 915px) {
+    .about {
+      margin-bottom: 90px;
+    }
+    .home {
+      margin-top: 120px;
+      margin-bottom: 80px;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Center text content within the footer */
+    }
+    /* Add your styles for 412x915 screens here */
+  }
+
+  @media screen and (width: 820px) and (height: 1180px) {
+    .about {
+      margin-bottom: 90px;
+    }
+    .home {
+      margin-top: 10%;
+      margin-bottom: 70%;
+    }
+
+    .nav-book {
+      color: #1E1E1E;
+      background-color: #FFD700;
+      padding: 2px 20px;
+    }
+    .nav-book:hover {
+      color: #1E1E1E;
+      background-color: #808080;
+      color: white;
+      padding: 20px 80px;
+    }
+    /* Add your styles for 820x1180 screens here */
+  }
+
+  @media screen and (width: 768px) and (height: 1024px) {
+    .left {
+      text-align: center; /* Center the content within the left column */
+    }
+  
+    .right {
+      text-align: center; /* Center the content within the right column */
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Center text content within the footer */
+    }
+   /* Add your styles for 768x1024 screens here */
+  }
+
+  @media screen and (width: 912px) and (height: 1368px) {
+    .about {
+      margin-bottom: 90px;
+    }
+    .home {
+      margin-top: 50%;
+      margin-bottom: -50%;
+    }  /* Add your styles for 912x1368 screens here */
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Center text content within the footer */
+    }
+  }
+  @media screen and (width: 280px) and (height: 653px) {
+    .about {
+      margin-bottom: 90px;
+    }
+    .home {
+      margin-top: -50%;
+      margin-bottom: 20%;
+    } 
+    .img {
+      right: 25%; 
+    }
+    .home .text {
+      margin: 20% 0 0 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    }
+  
+    .home h1 {
+      font-size: 20px;
+    }
+  
+    .home p {
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+      font-size: 13px;
+    }
+    .left {
+      text-align: left; /* Center the content within the left column */
+    }
+  
+    .right {
+      text-align: left; /* Center the content within the right column */
+    }
+    #feedbacks-button {
+      margin-left: 30px;
+    }
+    footer {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      text-align: left; /* Center text content within the footer */
+    }
+    /* Add your styles for 280x653 screens here */
 }
 
 
