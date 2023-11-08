@@ -37,7 +37,7 @@ header {
 }
 
 .logo img {
-  width: 120px;
+  width: 
 }
 header nav {
   background-color:  #1A1A1A; /* Colore giallo */
@@ -106,8 +106,6 @@ header nav {
 .theme-toggle button:hover {
   color: #667; /* Text color on hover */
 }
-
-
 
 
 /* Stili per il menu (ul, li, a, ecc.) */
@@ -1107,7 +1105,7 @@ footer li:hover {
     }
     .home {
       margin-top: 50%;
-      margin-bottom: -50%;
+      margin-bottom: 50%;
     }  /* Add your styles for 912x1368 screens here */
     footer {
       display: flex;
