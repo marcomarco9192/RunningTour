@@ -408,7 +408,7 @@ button {
     }
   
     .book {
-      margin-top: 20%;
+      margin-top: none;
       height: auto;
       background-color: #FFD700;
     }
