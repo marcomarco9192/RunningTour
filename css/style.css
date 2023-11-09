@@ -1060,4 +1060,66 @@ footer li:hover {
 }
 
 
+@media screen and (width: 800px) and (height: 1280px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 75%;
+
+  }  /* Add your styles for 912x1368 screens here */
+  .nav-book {
+    color: #1E1E1E;
+    background-color: #FFD700;
+    padding: 2px 20px;
+  }
+  .nav-book:hover {
+    color: #1E1E1E;
+    background-color: #808080;
+    color: white;
+    padding: 20px 80px;
+  }
+}
+
+@media screen and (width: 991px) and (height: 1280px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 60%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+@media screen and (width: 1600px) and (height: 2560px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 100%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+@media screen and (width: 720px) and (height: 1280px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 60%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+@media screen and (width: 4096px) and (height: 2304px) {
+  .about {
+    margin-bottom: 90px;
+  }
+  .home {
+    margin-top: 30%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+
 
