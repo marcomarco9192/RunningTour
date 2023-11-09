@@ -490,14 +490,6 @@ button {
   background-color: none;
 }
 
-header ul li a:hover::before {
-  top: -3px;
-}
-
-header ul li a:hover::after {
-  bottom: -3px;
-}
-
 .btn1:hover {
   background: #808080; /* Brighter orange on hover */
   color: white;
