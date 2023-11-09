@@ -36,9 +36,6 @@ header {
   height: 8vh;
 }
 
-/* .logo img {
-  width: 
-} */
 header nav {
   background-color:  #1A1A1A; /* Colore giallo */
   padding: 20px 10px; /* Aggiungi spazio sopra/sotto al background se necessario */
@@ -56,7 +53,6 @@ header nav {
   padding: 10px 80px;
 }
 .nav-book:hover {
-  color: #1E1E1E;
   background-color: #808080;
   color: white;
   padding: 20px 80px;
@@ -93,13 +89,9 @@ header ul li a {
   font-size: 1.2rem;
   font-weight: 400;
   color: white;
-  transition: 0.5s;
-}
-
-header ul li a {
   position: relative;
   text-decoration: none;
-  color: white;
+  transition: 0.5s;
 }
 
 header ul li a:hover::before,
@@ -436,7 +428,6 @@ button {
   margin-bottom: 20px;
   line-height: 25px;
   color: #222222;
-  margin: 0 0 20px 50px;
 }
 
 .heading .btn1 {
