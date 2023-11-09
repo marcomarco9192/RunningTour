@@ -517,4 +517,35 @@ button {
       text-align: center; /* Center text content within the footer */
     }
   }
+
+
+@media screen and (width: 800px) and (height: 1280px) {
+  .home {
+    margin-top:25%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+@media screen and (width: 991px) and (height: 1280px) {
+  .home {
+    margin-top:25%;
+
+  }  /* Add your styles for 912x1368 screens here */
+}
+
+@media screen and (width: 1600px) and (height: 2560px) {
+  .home {
+    margin-top: 50%;
+  }  /* Add your styles for 912x1368 screens here */
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (width: 4096px) and (height: 2304px) {
+ /* Add your styles for 912x1368 screens here */
+  footer {
+    display: none;
+  }
+}
   
