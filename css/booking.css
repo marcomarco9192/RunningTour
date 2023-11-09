@@ -56,7 +56,6 @@ header nav {
   padding: 10px 80px;
 }
 .nav-book:hover {
-  color: #1E1E1E;
   background-color: #808080;
   color: white;
   padding: 20px 80px;
@@ -93,13 +92,9 @@ header ul li a {
   font-size: 1.2rem;
   font-weight: 400;
   color: white;
-  transition: 0.5s;
-}
-
-header ul li a {
   position: relative;
   text-decoration: none;
-  color: white;
+  transition: 0.5s;
 }
 
 header ul li a:hover::before,
@@ -290,7 +285,7 @@ button {
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     padding: 30px; /* Increased padding for more spacing */
-    margin: 2% auto;
+    margin: 5% auto;
     max-width: 500px;
     max-height: fit-content;
   }
@@ -355,11 +350,6 @@ button {
   .book input[type="submit"]:hover {
     background-color: #808080;
     color: white;
-  }
-
-  .book {
-    margin-top: 5%;
-    height: auto;
   }
 
   .book .search {
@@ -527,5 +517,3 @@ button {
       text-align: center; /* Center text content within the footer */
     }
   }
-  
-  
